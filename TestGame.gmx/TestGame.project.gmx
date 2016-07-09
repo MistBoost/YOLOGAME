@@ -18,7 +18,6 @@
     <background>background\bg_menu</background>
   </backgrounds>
   <paths name="paths"/>
-  <shaders name="shaders"/>
   <objects name="objects">
     <objects name="gMainMenu">
       <object>objects\obj_parentButton</object>

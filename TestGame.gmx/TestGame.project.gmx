@@ -33,7 +33,7 @@
     <objects name="Map">
       <object>objects\obj_area_parent</object>
       <object>objects\obj_map</object>
-      <object>objects\obj_area_parent</object>
+      <object>objects\obj_area0</object>
       <object>objects\obj_area1</object>
       <object>objects\obj_area2</object>
       <object>objects\obj_area3</object>

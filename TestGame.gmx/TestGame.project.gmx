@@ -20,6 +20,7 @@
     <background>background\bg_menu</background>
   </backgrounds>
   <paths name="paths"/>
+  <shaders name="shaders"/>
   <objects name="objects">
     <objects name="gMainMenu">
       <object>objects\obj_parentButton</object>
@@ -27,7 +28,9 @@
       <object>objects\obj_exitButton</object>
     </objects>
     <objects name="Map">
-      <object>objects\object3</object>
+      <object>objects\obj__map</object>
+      <object>objects\obj_area0</object>
+      <object>objects\obj_area_parent</object>
     </objects>
   </objects>
   <rooms name="rooms">

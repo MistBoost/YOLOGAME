@@ -13,6 +13,8 @@
       <sprite>sprites\spr_exitSprite</sprite>
     </sprites>
     <sprite>sprites\spr_map</sprite>
+    <sprite>sprites\spr_area0</sprite>
+    <sprite>sprites\spr_area1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_menu</background>
@@ -24,9 +26,13 @@
       <object>objects\obj_playButton</object>
       <object>objects\obj_exitButton</object>
     </objects>
+    <objects name="Map">
+      <object>objects\object3</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
+    <room>rooms\rm_map</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

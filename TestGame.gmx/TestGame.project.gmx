@@ -15,6 +15,9 @@
     <sprite>sprites\spr_map</sprite>
     <sprite>sprites\spr_area0</sprite>
     <sprite>sprites\spr_area1</sprite>
+    <sprite>sprites\spr_area2</sprite>
+    <sprite>sprites\spr_area3</sprite>
+    <sprite>sprites\spr_area4</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_menu</background>
@@ -27,9 +30,14 @@
       <object>objects\obj_exitButton</object>
     </objects>
     <objects name="Map">
-      <object>objects\obj__map</object>
-      <object>objects\obj_area0</object>
       <object>objects\obj_area_parent</object>
+      <object>objects\obj_map</object>
+      <object>objects\obj_area0</object>
+      <object>objects\obj_area1</object>
+      <object>objects\obj_area2</object>
+      <object>objects\obj_area3</object>
+      <object>objects\obj_area4</object>
+      <object>objects\obj_map_control</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -31,6 +31,7 @@
       <object>objects\obj_exitButton</object>
     </objects>
     <objects name="Map">
+      <object>objects\obj_GUI</object>
       <object>objects\obj_area_parent</object>
       <object>objects\obj_map</object>
       <object>objects\obj_area0</object>
@@ -39,7 +40,6 @@
       <object>objects\obj_area3</object>
       <object>objects\obj_area4</object>
       <object>objects\obj_map_control</object>
-      <object>objects\obj_GUI</object>
     </objects>
   </objects>
   <rooms name="rooms">

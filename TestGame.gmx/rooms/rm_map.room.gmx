@@ -52,12 +52,10 @@
   </views>
   <instances>
     <instance objName="obj_map" x="0" y="0" name="inst_E2B3D906" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area0" x="66" y="160" name="inst_17A1917B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area1" x="70" y="126" name="inst_015E48B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area2" x="102" y="53" name="inst_6A6484FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area3" x="144" y="146" name="inst_8F2727A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area4" x="126" y="125" name="inst_1195ACCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_map_control" x="-23" y="-5" name="inst_AEE56B67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

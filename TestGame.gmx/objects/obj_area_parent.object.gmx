@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>highlight = false
-color = c_white
+            <string>
+image_speed = 0
+color = c_white;
 </string>
           </argument>
         </arguments>
@@ -72,8 +73,8 @@ color = c_white
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>highlight = true
-color = c_red
+            <string>
+color = c_blue
 </string>
           </argument>
         </arguments>

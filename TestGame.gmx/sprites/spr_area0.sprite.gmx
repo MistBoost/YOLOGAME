@@ -4,7 +4,7 @@
   <xorig>0</xorig>
   <yorigin>0</yorigin>
   <colkind>0</colkind>
-  <coltolerance>0</coltolerance>
+  <coltolerance>50</coltolerance>
   <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>6</bbox_left>
@@ -21,5 +21,7 @@
   <height>64</height>
   <frames>
     <frame index="0">images\spr_area0_0.png</frame>
+    <frame index="1">images\spr_area0_1.png</frame>
+    <frame index="2">images\spr_area0_2.png</frame>
   </frames>
 </sprite>

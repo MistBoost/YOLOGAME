@@ -33,6 +33,7 @@
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
     <room>rooms\rm_map</room>
+    <room>rooms\peto</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

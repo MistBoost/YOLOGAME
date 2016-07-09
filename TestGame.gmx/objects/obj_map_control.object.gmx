@@ -28,6 +28,8 @@
             <string>global.area[0] = obj_area0;
 global.area[1] = obj_area1;
 global.area[2] = obj_area2;
+global.area[3] = obj_area3;
+global.area[4] = obj_area4;
 </string>
           </argument>
         </arguments>

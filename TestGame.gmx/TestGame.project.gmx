@@ -39,7 +39,7 @@
       <object>objects\obj_area3</object>
       <object>objects\obj_area4</object>
       <object>objects\obj_map_control</object>
-      <object>objects\obj_GUI</object>
+      <object>objects\obj_gui</object>
     </objects>
   </objects>
   <rooms name="rooms">

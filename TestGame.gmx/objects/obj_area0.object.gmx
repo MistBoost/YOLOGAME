@@ -26,9 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+name = "South Frost Peninsula";
 iron_res = 5;
 gold_res = 4;
 wood_res = 6;
+food_res = 6;
 population = 500;
 pop_incr = 1.05;
 </string>

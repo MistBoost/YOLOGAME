@@ -29,8 +29,14 @@
 image_speed = 0
 color = c_gray;
 border_color = c_black;
-
-
+hovered = false;
+name = "unnamed";
+wood_res = 0;
+iron_res = 0;
+gold_res = 0;
+food_res = 0;
+population = 0;
+pop_incr = 0;
 </string>
           </argument>
         </arguments>
@@ -97,6 +103,7 @@ else{
             <string>
 /*border_color = c_black
 depth = 0;*/
+hovered = false;
 </string>
           </argument>
         </arguments>
@@ -122,6 +129,7 @@ depth = 0;*/
             <string>/*
 border_color = make_color_rgb(72,127,212);
 depth = -1;*/
+hovered = true;
 </string>
           </argument>
         </arguments>
@@ -172,6 +180,17 @@ depth = -1;*/
             <string>
 draw_sprite_ext(sprite_index, 0, x, y, 1, 1, 0, color, 1);
 draw_sprite_ext(sprite_index, 1, x, y, 1, 1, 0, border_color, 1);
+
+if (hovered) { 
+    for(var i=0; i&lt;global.players; i++){
+        if((ds_list_find_index(obj_map_control.player_areas[i], id) &gt;= 0)){
+            if (i == 0) draw_set_colour(make_colour_rgb(0,0,204));
+            if (i == 1) draw_set_colour(make_colour_rgb(204,0,0));   
+        } else draw_set_colour(make_colour_rgb(128,128,128));
+    }
+    draw_text(obj_cursor.x + 25,obj_cursor.y + 5,string(name));
+    draw_set_colour(make_colour_rgb(0,0,0));
+}
 </string>
           </argument>
         </arguments>

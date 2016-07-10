@@ -26,13 +26,20 @@
       <sprite>sprites\spr_area9</sprite>
     </sprites>
     <sprite>sprites\spr_turn_info</sprite>
-    <sprite>sprites\spr_cursor_1</sprite>
-    <sprite>sprites\spr_religion_signs</sprite>
+    <sprites name="Icons">
+      <sprite>sprites\spr_religion_signs</sprite>
+      <sprite>sprites\spr_cursor_1</sprite>
+      <sprite>sprites\spr_resource_icons_small</sprite>
+    </sprites>
+    <sprite>sprites\spr_hud_left</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_menu</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\f_info_small</font>
+  </fonts>
   <objects name="objects">
     <objects name="gMainMenu">
       <object>objects\obj_parentButton</object>

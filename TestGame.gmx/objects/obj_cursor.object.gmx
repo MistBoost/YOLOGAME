@@ -27,6 +27,11 @@
             <kind>1</kind>
             <string>image_speed = 0;
 image_index = 0;
+
+info_offset = 24;
+info_inner_x = 5;
+info_inner_y = 2;
+info_height = 122;
 </string>
           </argument>
         </arguments>
@@ -51,6 +56,70 @@ image_index = 0;
             <kind>1</kind>
             <string>x = mouse_x;
 y = mouse_y;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+col_obj = collision_point( x, y, obj_area_parent, true, true );
+if(col_obj!=noone)
+    info_obj = col_obj;
+else
+    info_obj = noone;
+
+
+
+//if( place_meeting(x,y,obj_area_parent)){
+if( info_obj != noone){
+    var h = string_height(info_obj.name);
+    var w = max(string_width(info_obj.name), 62);
+    var xic = 6;
+    var yoff = 8;
+
+    draw_set_alpha(.95);
+    draw_set_color(make_color_rgb(176,176,176));
+    draw_rectangle(x+info_offset,y+yoff ,x+info_offset+w+(info_inner_x*2),y+info_height+info_inner_y,false);
+    draw_set_color(make_color_rgb(32,32,32));
+    draw_rectangle(x+info_offset,y+yoff ,x+info_offset+w+(info_inner_x*2),y+info_height+info_inner_y,true);
+    draw_line(x+info_offset, y+h+info_inner_y+yoff, x+info_offset+w+(info_inner_x*2), y+h+info_inner_y+yoff)
+    draw_set_font(f_info_small);
+    draw_set_alpha(1);
+    draw_set_color(make_color_rgb(0,0,0));
+    draw_text(x+info_offset+info_inner_x, y+yoff+info_inner_y,info_obj.name);
+    draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*1),info_obj.wood_res);
+    draw_sprite(spr_resource_icons_small,0,x+info_offset+xic, y+h+info_inner_y+(14*1));
+    draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*2),info_obj.iron_res);
+    draw_sprite(spr_resource_icons_small,1,x+info_offset+xic, y+h+info_inner_y+(14*2));
+    draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*3),info_obj.gold_res);
+    draw_sprite(spr_resource_icons_small,2,x+info_offset+xic, y+h+info_inner_y+(14*3));
+    draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*4),info_obj.food_res);
+    draw_sprite(spr_resource_icons_small,3,x+info_offset+xic, y+h+info_inner_y+(14*4));
+    draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*5),info_obj.population);
+    draw_sprite(spr_resource_icons_small,4,x+info_offset+xic, y+h+info_inner_y+(14*5));
+    draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*6),string((info_obj.pop_incr-1)*100)+"%");
+    draw_sprite(spr_resource_icons_small,5,x+info_offset+xic, y+h+info_inner_y+(14*6));
+    
+}
+
+draw_self();
 </string>
           </argument>
         </arguments>

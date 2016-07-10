@@ -25,12 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-image_speed = 0
+            <string>image_speed = 0
 color = c_gray;
 border_color = c_black;
-
-
 </string>
           </argument>
         </arguments>
@@ -77,7 +74,6 @@ else{
         </arguments>
       </action>
     </event>
-<<<<<<< HEAD
     <event eventtype="6" enumb="11">
       <action>
         <libid>1</libid>
@@ -128,8 +124,6 @@ depth = -1;*/
         </arguments>
       </action>
     </event>
-=======
->>>>>>> e6296466969d68d300b6b437a78e632bbfb913c4
     <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
@@ -175,6 +169,7 @@ depth = -1;*/
             <string>
 draw_sprite_ext(sprite_index, 0, x, y, 1, 1, 0, color, 1);
 draw_sprite_ext(sprite_index, 1, x, y, 1, 1, 0, border_color, 1);
+
 </string>
           </argument>
         </arguments>

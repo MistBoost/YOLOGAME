@@ -7,20 +7,21 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>511</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>511</bbox_bottom>
+  <bbox_left>6</bbox_left>
+  <bbox_right>41</bbox_right>
+  <bbox_top>6</bbox_top>
+  <bbox_bottom>40</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>512</width>
-  <height>512</height>
+  <width>48</width>
+  <height>48</height>
   <frames>
-    <frame index="0">images\spr_map_0.png</frame>
-    <frame index="1">images\spr_map_1.png</frame>
+    <frame index="0">images\spr_religion_signs_0.png</frame>
+    <frame index="1">images\spr_religion_signs_1.png</frame>
+    <frame index="2">images\spr_religion_signs_2.png</frame>
   </frames>
 </sprite>

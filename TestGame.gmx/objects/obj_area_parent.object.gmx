@@ -28,6 +28,50 @@
             <string>
 image_speed = 0
 color = c_white;
+border_color = c_black;
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+for(var i=0; i&lt;global.players; i++){
+    if(sign(ds_list_find_index(obj_map_control.player_areas[i], self.id)+1)){
+        color = global.player_color[i];
+    }
+}
+
+if(global.selected_area == self.id){
+    border_color = global.player_select_color;
+    depth = -2;
+}
+else if( place_meeting(x,y,obj_cursor)){
+    border_color = make_color_rgb(72,127,212);
+    depth = -1;
+}
+else{
+    border_color = c_black;
+    depth = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -50,7 +94,9 @@ color = c_white;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>color = c_white
+            <string>
+/*border_color = c_black
+depth = 0;*/
 </string>
           </argument>
         </arguments>
@@ -73,8 +119,34 @@ color = c_white;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-color = c_blue
+            <string>/*
+border_color = make_color_rgb(72,127,212);
+depth = -1;*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(sign(ds_list_find_index(obj_map_control.player_areas[0], self.id)+1)){
+    global.selected_area = self.id;
+}
 </string>
           </argument>
         </arguments>
@@ -98,7 +170,8 @@ color = c_blue
           <argument>
             <kind>1</kind>
             <string>
-draw_sprite_ext(sprite_index, -1, x, y, 1, 1, 0, color, 1);
+draw_sprite_ext(sprite_index, 0, x, y, 1, 1, 0, color, 1);
+draw_sprite_ext(sprite_index, 1, x, y, 1, 1, 0, border_color, 1);
 </string>
           </argument>
         </arguments>

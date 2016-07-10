@@ -4,24 +4,24 @@
   <xorig>0</xorig>
   <yorigin>0</yorigin>
   <colkind>0</colkind>
-  <coltolerance>50</coltolerance>
+  <coltolerance>0</coltolerance>
   <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>1</bbox_left>
-  <bbox_right>59</bbox_right>
-  <bbox_top>1</bbox_top>
-  <bbox_bottom>58</bbox_bottom>
+  <bbox_left>2</bbox_left>
+  <bbox_right>40</bbox_right>
+  <bbox_top>2</bbox_top>
+  <bbox_bottom>45</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>61</width>
-  <height>60</height>
+  <width>42</width>
+  <height>48</height>
   <frames>
-    <frame index="0">images\spr_area4_0.png</frame>
-    <frame index="1">images\spr_area4_1.png</frame>
-    <frame index="2">images\spr_area4_2.png</frame>
+    <frame index="0">images\spr_area7_0.png</frame>
+    <frame index="1">images\spr_area7_1.png</frame>
+    <frame index="2">images\spr_area7_2.png</frame>
   </frames>
 </sprite>

@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,13 +25,70 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.area[0] = obj_area0;
-global.area[1] = obj_area1;
-global.area[2] = obj_area2;
-global.area[3] = obj_area3;
-global.area[4] = obj_area4;
+            <string>///Basic variables of areas
+
+<<<<<<< HEAD
+area[0] = obj_area0.id;
+area[1] = obj_area1.id;
+area[2] = obj_area2.id;
+area[3] = obj_area3.id;
+area[4] = obj_area4.id;
+area[5] = obj_area5.id;
+area[6] = obj_area6.id;
+area[7] = obj_area7.id;
+area[8] = obj_area8.id;
+area[9] = obj_area9.id;
+
+global.players = 2;
+global.areas = 10;
+global.selected_area = 0;
+global.player_select_color = make_color_rgb(0,32,139);
+
+global.player_color[0] = c_blue;
+global.player_color[1] = c_red;
+
 
 instance_create(0,0, obj_gui);
+
+for(var i=0; i&lt;global.players; i++){
+    player_areas[i] = ds_list_create();
+}
+
+ds_list_add(player_areas[0], area[0], area[1]);
+global.a = player_areas[0];
+ds_list_add(player_areas[1], area[5]);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Map Graph
+
+for(var i=0; i&lt;global.areas; i++){
+    area_neigh[i] = ds_list_create();
+}
+
+ds_list_add(area_neigh[0], area[1]);
+ds_list_add(area_neigh[1], area[0], area[2], area[4]);
+ds_list_add(area_neigh[2], area[4], area[5], area[6]);
+=======
+instance_create(0,0, obj_gui);
+>>>>>>> origin/master
 </string>
           </argument>
         </arguments>

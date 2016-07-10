@@ -52,6 +52,7 @@
       <object>objects\obj_area8</object>
       <object>objects\obj_area9</object>
       <object>objects\obj_gui</object>
+      <object>objects\obj_map_control</object>
     </objects>
     <object>objects\obj_cursor</object>
   </objects>

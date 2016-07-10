@@ -71,7 +71,7 @@ if(global.selected_area == self.id){
     depth = -2;
 }
 else if( place_meeting(x,y,obj_cursor)){
-    border_color = make_color_rgb(208,208,208);
+    border_color = make_color_rgb(186,186,186);
     depth = -1;
 }
 else{
@@ -83,6 +83,7 @@ else{
         </arguments>
       </action>
     </event>
+<<<<<<< HEAD
     <event eventtype="6" enumb="11">
       <action>
         <libid>1</libid>
@@ -135,6 +136,8 @@ hovered = true;
         </arguments>
       </action>
     </event>
+=======
+>>>>>>> e6296466969d68d300b6b437a78e632bbfb913c4
     <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>

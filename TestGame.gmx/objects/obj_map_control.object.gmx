@@ -52,9 +52,7 @@ instance_create(0,0, obj_gui);
 for(var i=0; i&lt;global.players; i++){
     player_areas[i] = ds_list_create();
 }
-
 ds_list_add(player_areas[0], area[0], area[1]);
-global.a = player_areas[0];
 ds_list_add(player_areas[1], area[8], area[9]);
 </string>
           </argument>

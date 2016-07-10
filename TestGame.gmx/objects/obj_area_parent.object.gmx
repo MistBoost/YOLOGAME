@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>
 image_speed = 0
-color = c_gray;
+color = c_white;
 border_color = c_black;
 
 
@@ -65,7 +65,7 @@ if(global.selected_area == self.id){
     depth = -2;
 }
 else if( place_meeting(x,y,obj_cursor)){
-    border_color = make_color_rgb(208,208,208);
+    border_color = make_color_rgb(72,127,212);
     depth = -1;
 }
 else{

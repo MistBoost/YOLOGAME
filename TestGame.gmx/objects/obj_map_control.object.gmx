@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>///Basic variables of areas
 
-<<<<<<< HEAD
 area[0] = obj_area0.id;
 area[1] = obj_area1.id;
 area[2] = obj_area2.id;
@@ -42,10 +41,10 @@ area[9] = obj_area9.id;
 global.players = 2;
 global.areas = 10;
 global.selected_area = 0;
-global.player_select_color = make_color_rgb(0,32,139);
+global.player_select_color = make_color_rgb(24,24,148);
 
-global.player_color[0] = c_blue;
-global.player_color[1] = c_red;
+global.player_color[0] = make_color_rgb(64,64,208);
+global.player_color[1] = make_color_rgb(208,64,64);
 
 
 instance_create(0,0, obj_gui);
@@ -56,7 +55,7 @@ for(var i=0; i&lt;global.players; i++){
 
 ds_list_add(player_areas[0], area[0], area[1]);
 global.a = player_areas[0];
-ds_list_add(player_areas[1], area[5]);
+ds_list_add(player_areas[1], area[8], area[9]);
 </string>
           </argument>
         </arguments>
@@ -86,9 +85,13 @@ for(var i=0; i&lt;global.areas; i++){
 ds_list_add(area_neigh[0], area[1]);
 ds_list_add(area_neigh[1], area[0], area[2], area[4]);
 ds_list_add(area_neigh[2], area[4], area[5], area[6]);
-=======
-instance_create(0,0, obj_gui);
->>>>>>> origin/master
+ds_list_add(area_neigh[3], area[4], area[7]);
+ds_list_add(area_neigh[4], area[2], area[3], area[6], area[7]);
+ds_list_add(area_neigh[5], area[2], area[6], area[8]);
+ds_list_add(area_neigh[6], area[2], area[4], area[5], area[7], area[8]);
+ds_list_add(area_neigh[7], area[3], area[4], area[6], area[8]);
+ds_list_add(area_neigh[8], area[5], area[6], area[7], area[9]);
+ds_list_add(area_neigh[9], area[8]);
 </string>
           </argument>
         </arguments>

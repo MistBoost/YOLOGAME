@@ -73,9 +73,9 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>image_index = 1;
-audio_play_sound(menuButtonClick, 10, false);
+sound_play(menuButtonClick);
 
-effect_create_above(ef_spark, bbox_left + sprite_width - random(10), bbox_top + 3, random(1)+.5, merge_colour(c_white, c_yellow, random(.75)+.25));
+effect_create_above(ef_spark, bbox_left + sprite_width - random(20)+4, bbox_top + 6, random(1)+.5, merge_colour(c_white, c_yellow, random(.75)+.25));
 </string>
           </argument>
         </arguments>

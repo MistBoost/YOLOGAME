@@ -1,0 +1,80 @@
+
+
+Resources:
+	Wood - needed for build a structures, war machines
+	Gold - needed for recruiting units and paying upkeeps
+	Iron - needed for recruiting units
+	Food - needed for managing armies and population growth
+
+Areas:
+	ID: 0
+	Name: South Hollow
+	Resources: Wood - 5, Iron - 5, Gold - 4, Food - 7
+	
+	ID:1 
+	Name: North Hollow
+	Resources: Wood - 3, Iron - 7, Gold - 3, Food - 6
+	
+	ID:2 
+	Name: Northpass
+	Resources: Wood - 4, Iron - 8, Gold - 1, Food - 5
+	
+	ID:3 
+	Name: Veritas
+	Resources: Wood - 5, Iron - 3, Gold - 4, Food - 6
+	
+	ID:4 
+	Name: Blood Bay
+	Resources: Wood - 4, Iron - 8, Gold - 1, Food - 3
+	
+	ID:5 
+	Name: Bardford
+	Resources: Wood - 7, Iron - 2, Gold - 6, Food - 4
+	
+	ID:6 
+	Name: Balmortal
+	Resources: Wood - 8, Iron - 4, Gold - 5, Food - 2
+	
+	ID:7 
+	Name: Mournfield
+	Resources: Wood - 4, Iron - 1, Gold - 6, Food - 9
+	
+	ID:8 
+	Name: Windbay
+	Resources: Wood - 4, Iron - 5, Gold - 4, Food - 6
+	
+	ID:9
+	Name: Ilfrabeck
+	Resources: Wood - 6, Iron - 4, Gold - 6, Food - 5
+	
+Buildings:
+	Production:
+		Wood:
+			Woodcuter 	- increase wood production by 2
+						
+			Sawmill 	- increase wood production by 1
+						- required Woodcuter
+						
+		Iron:
+			Iron Mines 	- increase iron production by 2
+						- required area base iron production 5 or more
+			
+		Gold:
+			Gold Mines 	- increase gold production by 2
+						- required area base gold production 5 or more
+			
+		Food:
+			Wheat Farms	- increase food production by 1
+			Mills		- increase food production by 1
+						- required wheat farms
+			Cattle Farms- increase food production by 2
+						- required wheat farms
+			
+			
+
+		Mix:
+			Blacksmith	- increase iron production by 1
+						- increase gold production by 1
+						
+			
+			

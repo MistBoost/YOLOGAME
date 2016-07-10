@@ -69,8 +69,6 @@ Buildings:
 						- required wheat farms
 			Cattle Farms- increase food production by 2
 						- required wheat farms
-			
-			
 
 		Mix:
 			Blacksmith	- increase iron production by 1

@@ -26,8 +26,8 @@
       <sprite>sprites\spr_area9</sprite>
     </sprites>
     <sprite>sprites\spr_turn_info</sprite>
-    <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_cursor_1</sprite>
+    <sprite>sprites\spr_religion_signs</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_menu</background>

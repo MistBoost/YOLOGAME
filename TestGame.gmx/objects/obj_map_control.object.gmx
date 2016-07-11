@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Basic variables of areas
+            <string>///Basic variables of areas, players
 
 area[0] = obj_area0.id;
 area[1] = obj_area1.id;
@@ -58,6 +58,22 @@ for(var i=0; i&lt;=global.players; i++){
 ds_list_add(player_areas[0], area[2], area[3], area[4], area[5], area[6], area[7]);
 ds_list_add(player_areas[1], area[0], area[1]);
 ds_list_add(player_areas[2], area[8], area[9]);
+
+//players
+
+global.player_list = ds_list_create();
+for (i = 0; i &lt; global.players; i++) {
+    ds_list_add(global.player_list, instance_create(0,0,obj_player_parent).id);
+}
+
+for (j = 0; j &lt; global.players; j++) {
+    for (i = 0; i &lt; ds_list_size(player_areas[j+1]); i++) {
+        global.player_list[| j].wood_res += ds_list_find_value(player_areas[j+1],i).wood_res;
+        global.player_list[| j].iron_res += ds_list_find_value(player_areas[j+1],i).iron_res;
+        global.player_list[| j].gold_res += ds_list_find_value(player_areas[j+1],i).gold_res;
+        global.player_list[| j].food_res += ds_list_find_value(player_areas[j+1],i).food_res;
+    }
+}
 </string>
           </argument>
         </arguments>

@@ -62,6 +62,7 @@
     <instance objName="obj_area7" x="172" y="120" name="inst_5438229A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area8" x="201" y="93" name="inst_8D755C6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area9" x="216" y="96" name="inst_90E59D15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_parent" x="512" y="48" name="inst_974043C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_map_control" x="518" y="16" name="inst_BE290ABE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_turnend_button" x="672" y="480" name="inst_E4537CC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>

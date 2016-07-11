@@ -145,6 +145,14 @@ if (global.selected_area!=noone &amp;&amp; hud_left_drawing){
     
     draw_set_color(c_white);
 }
+    draw_set_color(c_blue);
+    draw_text(100,view_hview[0]-50,string(global.player_list[| 0].wood_res));
+    draw_text(130,view_hview[0]-50,string(global.player_list[| 0].iron_res));
+    draw_text(160,view_hview[0]-50,string(global.player_list[| 0].gold_res));
+    draw_text(190,view_hview[0]-50,string(global.player_list[| 0].food_res));   
+    
+    
+    draw_set_color(c_white);
 </string>
           </argument>
         </arguments>

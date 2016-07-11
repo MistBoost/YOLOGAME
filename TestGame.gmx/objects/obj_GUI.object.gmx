@@ -25,10 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hud_left_w = 160;
+            <string>///HUD position variables
+hud_left_w = 160;
 hud_left_h = 400;
 hud_left_x = room_width-hud_left_w;
-hud_left_y = 60;//(room_height-hud_left_h)/2;
+hud_left_y = 36;//(room_height-hud_left_h)/2;
+hud_left_x_off = 7;
+hud_left_y_off = 10;
 
 play_room_w = room_width-hud_left_w;
 play_room_h = room_height;
@@ -79,12 +82,43 @@ play_room_h = room_height;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_turn_info, -1, view_xview[0]+(play_room_w/2), view_yview[0]);
+            <string>
+//drawing HUD background (menu)
+draw_sprite(spr_turn_info, -1, view_xview[0]+(play_room_w/2), view_yview[0]);
 draw_sprite(spr_hud_left, -1, view_xview[0]+hud_left_x, view_yview[0]+hud_left_y );
+
+//drawing turn of players 
 draw_set_halign(fa_center);
+draw_set_color(c_black);
+draw_set_font(f_info);
 draw_text(view_xview[0]+(play_room_w/2), view_yview[0]+8, string("YOUR TURN"));
+draw_set_color(c_white);
 draw_set_halign(fa_left);
 
+//drawing left menu items
+if (global.selected_area!=noone){
+    var sel = global.selected_area;
+    var yy = 15;
+    var off = 0;
+    draw_set_color(c_black);
+    draw_set_alpha(1);
+    draw_set_font(f_menu_left);
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off, sel.name);
+    off = 12;
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*1), "Base land production:");
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*2), "Wood: " + string(sel.wood_res));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*3), "Iron: " + string(sel.iron_res));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*4), "Gold: " + string(sel.gold_res));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*5), "Food: " + string(sel.food_res));
+    
+    off += 12;
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*6), "Units:");
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*7), "Swordmans: " + string(sel.units[0]));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*8), "Archers: " + string(sel.units[1]));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*9), "Horsemans: " + string(sel.units[2]));
+    
+    draw_set_color(c_white);
+}
 </string>
           </argument>
         </arguments>

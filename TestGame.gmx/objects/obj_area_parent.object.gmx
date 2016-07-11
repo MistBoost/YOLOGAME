@@ -28,6 +28,15 @@
             <string>image_speed = 0
 color = c_gray;
 border_color = c_black;
+//army = 12;
+
+swordman = 10;
+archer = 6;
+horseman = 7;
+
+units[0] = 10;
+units[1] = 6;
+units[2] = 5;
 </string>
           </argument>
         </arguments>
@@ -69,56 +78,11 @@ else{
     border_color = c_black;
     depth = 0;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="11">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-/*border_color = c_black
-depth = 0;*/
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="10">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/*
-border_color = make_color_rgb(72,127,212);
-depth = -1;*/
+
+//Only for test - sets map BG depth
+if(id==obj_map.id){
+    depth = 50;
+}
 </string>
           </argument>
         </arguments>
@@ -143,6 +107,9 @@ depth = -1;*/
             <kind>1</kind>
             <string>if(sign(ds_list_find_index(obj_map_control.player_areas[global.player_id], id)+1)){
     global.selected_area = id;
+}
+else{
+    global.selected_area = noone;
 }
 </string>
           </argument>

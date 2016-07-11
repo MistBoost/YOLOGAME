@@ -25,20 +25,29 @@
       <sprite>sprites\spr_area8</sprite>
       <sprite>sprites\spr_area9</sprite>
     </sprites>
-    <sprite>sprites\spr_turn_info</sprite>
-    <sprites name="Icons">
-      <sprite>sprites\spr_religion_signs</sprite>
-      <sprite>sprites\spr_cursor_1</sprite>
-      <sprite>sprites\spr_resource_icons_small</sprite>
+    <sprites name="HUD">
+      <sprites name="Icons">
+        <sprite>sprites\spr_religion_signs</sprite>
+        <sprite>sprites\spr_cursor_1</sprite>
+        <sprite>sprites\spr_resource_icons_small</sprite>
+      </sprites>
+      <sprite>sprites\spr_turn_info</sprite>
+      <sprite>sprites\spr_hud_left</sprite>
+      <sprite>sprites\spr_turnend_button</sprite>
     </sprites>
-    <sprite>sprites\spr_hud_left</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_menu_off</background>
+    <background>background\background1</background>
+    <background>background\background2</background>
+    <background>background\background3</background>
+    <background>background\background4</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\f_info_small</font>
+    <font>fonts\f_info</font>
+    <font>fonts\f_menu_left</font>
   </fonts>
   <objects name="objects">
     <objects name="gMainMenu">
@@ -61,6 +70,7 @@
       <object>objects\obj_area9</object>
       <object>objects\obj_gui</object>
       <object>objects\obj_map_control</object>
+      <object>objects\obj_turnend_button</object>
     </objects>
     <object>objects\obj_cursor</object>
   </objects>

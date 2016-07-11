@@ -86,7 +86,6 @@ else
     info_obj = noone;
 
 
-
 //if( place_meeting(x,y,obj_area_parent)){
 if( info_obj != noone){
     var h = string_height(info_obj.name);

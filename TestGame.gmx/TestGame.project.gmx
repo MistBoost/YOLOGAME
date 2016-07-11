@@ -36,6 +36,7 @@
       <sprite>sprites\spr_turn_info</sprite>
       <sprite>sprites\spr_hud_left</sprite>
       <sprite>sprites\spr_turnend_button</sprite>
+      <sprite>sprites\spr_hud_bottom</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -52,7 +53,7 @@
   <fonts name="fonts">
     <font>fonts\f_info_small</font>
     <font>fonts\f_info</font>
-    <font>fonts\f_menu_left</font>
+    <font>fonts\f_menu</font>
   </fonts>
   <objects name="objects">
     <objects name="gMainMenu">

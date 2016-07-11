@@ -6,7 +6,7 @@
   <depth>50</depth>
   <persistent>0</persistent>
   <parentName>obj_area_parent</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_map_mask</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>

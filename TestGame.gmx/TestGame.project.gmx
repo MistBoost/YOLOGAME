@@ -10,6 +10,7 @@
   <sprites name="sprites">
     <sprites name="spriteGroup_mainMenu">
       <sprite>sprites\spr_playSprite</sprite>
+      <sprite>sprites\sprite19</sprite>
       <sprite>sprites\spr_exitSprite</sprite>
     </sprites>
     <sprites name="spriteGroup_area">
@@ -24,6 +25,7 @@
       <sprite>sprites\spr_area7</sprite>
       <sprite>sprites\spr_area8</sprite>
       <sprite>sprites\spr_area9</sprite>
+      <sprite>sprites\spr_map_mask</sprite>
     </sprites>
     <sprites name="HUD">
       <sprites name="Icons">
@@ -44,6 +46,9 @@
     <background>background\background4</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_get_owner.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\f_info_small</font>
     <font>fonts\f_info</font>

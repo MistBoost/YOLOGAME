@@ -80,11 +80,21 @@ y = mouse_y;
             <kind>1</kind>
             <string>
 col_obj = collision_point( x, y, obj_area_parent, true, true );
-if(col_obj!=noone)
-    info_obj = col_obj;
-else
-    info_obj = noone;
 
+
+if(col_obj!=noone){
+    info_obj = col_obj;
+}
+else if (col_obj==noone){
+    info_obj = noone;
+}
+else{
+    info_obj = noone;
+}
+
+if(instance_exists(obj_map) &amp;&amp; info_obj!=noone &amp;&amp; col_obj.id==obj_map.id){
+    info_obj = noone;
+}
 
 //if( place_meeting(x,y,obj_area_parent)){
 if( info_obj != noone){

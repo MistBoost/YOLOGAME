@@ -32,6 +32,9 @@ hud_left_x = room_width-hud_left_w;
 hud_left_y = 36;//(room_height-hud_left_h)/2;
 hud_left_x_off = 7;
 hud_left_y_off = 10;
+hud_left_drawing = false;
+hud_left_x_anim = hud_left_w;
+hud_left_x_anim_spd = 14;
 
 play_room_w = room_width-hud_left_w;
 play_room_h = room_height;
@@ -60,6 +63,25 @@ play_room_h = room_height;
             <string>if(keyboard_check_pressed(vk_escape)){
     room_goto(rm_mainMenu);
 }
+
+if(global.selected_area != noone){
+    if(!hud_left_drawing &amp;&amp; hud_left_x_anim != 0){
+        hud_left_x_anim -= hud_left_x_anim_spd;
+    }
+}
+else{
+    if(hud_left_x_anim&lt;hud_left_w){
+        hud_left_x_anim += hud_left_x_anim_spd;
+    }
+}
+
+if(hud_left_x_anim &lt;= 0){
+    hud_left_drawing = true;
+    hud_left_x_anim = 0;
+}
+else{
+    hud_left_drawing = false;
+}
 </string>
           </argument>
         </arguments>
@@ -83,9 +105,10 @@ play_room_h = room_height;
           <argument>
             <kind>1</kind>
             <string>
+var xan = hud_left_x_anim;
 //drawing HUD background (menu)
 draw_sprite(spr_turn_info, -1, view_xview[0]+(play_room_w/2), view_yview[0]);
-draw_sprite(spr_hud_left, -1, view_xview[0]+hud_left_x, view_yview[0]+hud_left_y );
+draw_sprite(spr_hud_left, -1, view_xview[0]+hud_left_x+xan, view_yview[0]+hud_left_y );
 
 //drawing turn of players 
 draw_set_halign(fa_center);
@@ -96,26 +119,29 @@ draw_set_color(c_white);
 draw_set_halign(fa_left);
 
 //drawing left menu items
-if (global.selected_area!=noone){
+if (global.selected_area!=noone &amp;&amp; hud_left_drawing){
     var sel = global.selected_area;
     var yy = 15;
     var off = 0;
+    var ii = 0;
+    
     draw_set_color(c_black);
     draw_set_alpha(1);
     draw_set_font(f_menu_left);
-    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off, sel.name);
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), sel.name);
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), "Owner: Player" + string(scr_get_owner(sel.id)));
     off = 12;
-    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*1), "Base land production:");
-    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*2), "Wood: " + string(sel.wood_res));
-    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*3), "Iron: " + string(sel.iron_res));
-    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*4), "Gold: " + string(sel.gold_res));
-    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*5), "Food: " + string(sel.food_res));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), "Base land production:");
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), "Wood: " + string(sel.wood_res));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), "Iron: " + string(sel.iron_res));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), "Gold: " + string(sel.gold_res));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), "Food: " + string(sel.food_res));
     
     off += 12;
-    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*6), "Units:");
-    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*7), "Swordmans: " + string(sel.units[0]));
-    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*8), "Archers: " + string(sel.units[1]));
-    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*9), "Horsemans: " + string(sel.units[2]));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), "Units:");
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), "Swordmans: " + string(sel.units[0]));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), "Archers: " + string(sel.units[1]));
+    draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), "Horsemans: " + string(sel.units[2]));
     
     draw_set_color(c_white);
 }

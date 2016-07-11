@@ -30,7 +30,7 @@ image_speed = 0;
 
 background_hspeed[0] = 0.25
 background_hspeed[1] = 0.5
-background_hspeed[2] = 1
+background_hspeed[2] = 0.85
 background_hspeed[3] = 1.25
 </string>
           </argument>

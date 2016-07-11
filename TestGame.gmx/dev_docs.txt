@@ -50,7 +50,7 @@ Areas:
 Buildings:
 	Production:
 		Wood:
-			Woodcuter 	- increase wood production by 2
+			Woodcutter 	- increase wood production by 2
 						
 			Sawmill 	- increase wood production by 1
 						- required Woodcuter
@@ -73,6 +73,6 @@ Buildings:
 		Mix:
 			Blacksmith	- increase iron production by 1
 						- increase gold production by 1
-						
+						- requires at least one iron mine
 			
 			

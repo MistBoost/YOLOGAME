@@ -78,6 +78,7 @@
       <object>objects\obj_turnend_button</object>
     </objects>
     <object>objects\obj_cursor</object>
+    <object>objects\obj_player_parent</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>

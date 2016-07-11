@@ -34,7 +34,7 @@ hud_left_x_off = 7;
 hud_left_y_off = 10;
 hud_left_drawing = false;
 hud_left_x_anim = hud_left_w;
-hud_left_x_anim_spd = 14;
+hud_left_x_anim_spd = 10;
 
 hud_bot_w = sprite_get_width(spr_hud_bottom);
 hud_bot_h = sprite_get_height(spr_hud_bottom);
@@ -123,7 +123,12 @@ draw_sprite(spr_hud_bottom, -1, view_xview[0]+hud_bot_x, view_yview[0]+hud_bot_y
 draw_set_halign(fa_center);
 draw_set_color(c_black);
 draw_set_font(f_info);
-draw_text(view_xview[0]+(play_room_w/2), view_yview[0]+8, string("YOUR TURN"));
+var turn_str;
+if(obj_turn_control.player_turn==global.player_id)
+    turn_str = "YOUR TURN";
+else
+    turn_str = "PLAYER" + string(obj_turn_control.player_turn)
+draw_text(view_xview[0]+(play_room_w/2), view_yview[0]+8, turn_str);
 draw_set_color(c_white);
 draw_set_halign(fa_left);
 

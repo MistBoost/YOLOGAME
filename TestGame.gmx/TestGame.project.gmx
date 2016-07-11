@@ -11,7 +11,7 @@
   <sprites name="sprites">
     <sprites name="spriteGroup_mainMenu">
       <sprite>sprites\spr_playSprite</sprite>
-      <sprite>sprites\sprite19</sprite>
+      <sprite>sprites\spr_asdgag</sprite>
       <sprite>sprites\spr_exitSprite</sprite>
     </sprites>
     <sprites name="spriteGroup_area">
@@ -35,7 +35,7 @@
         <sprite>sprites\sprite25</sprite>
         <sprite>sprites\spr_resource_icons_small</sprite>
         <sprite>sprites\spr_cursor_2</sprite>
-        <sprite>sprites\sprite24</sprite>
+        <sprite>sprites\spr_asdasagag</sprite>
       </sprites>
       <sprite>sprites\spr_turn_info</sprite>
       <sprite>sprites\spr_hud_left</sprite>
@@ -44,6 +44,8 @@
     </sprites>
     <sprite>sprites\spr_ingame_menu_bg</sprite>
     <sprite>sprites\spr_ingame_menu_return_button</sprite>
+    <sprite>sprites\spr_ingame_menu_settings_button</sprite>
+    <sprite>sprites\spr_ingame_menu_exit_button</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_menu_off</background>
@@ -86,15 +88,15 @@
       <object>objects\obj_turnend_button</object>
       <object>objects\obj_turn_control</object>
     </objects>
-    <object>objects\obj_cursor</object>
-    <object>objects\obj_player_parent</object>
-    <object>objects\obj_sound_control</object>
     <objects name="obj_ingame_menu">
       <object>objects\obj_ingame_menu</object>
       <object>objects\obj_ingame_menu_return_button</object>
       <object>objects\obj_ingame_menu_settings_button</object>
       <object>objects\obj_ingame_menu_exit_button</object>
     </objects>
+    <object>objects\obj_cursor</object>
+    <object>objects\obj_player_parent</object>
+    <object>objects\obj_sound_control</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>

@@ -114,9 +114,9 @@ else{
             <string>
 var xan = hud_left_x_anim;
 //drawing HUD background (menu)
-draw_sprite(spr_turn_info, -1, view_xview[0]+(play_room_w/2), view_yview[0]);
-draw_sprite(spr_hud_left, -1, view_xview[0]+hud_left_x+xan, view_yview[0]+hud_left_y );
-draw_sprite(spr_hud_bottom, -1, view_xview[0]+hud_bot_x, view_yview[0]+hud_bot_y );
+draw_sprite(spr_turn_info, 0, view_xview[0]+(play_room_w/2), view_yview[0]);
+draw_sprite(spr_hud_left, 0, view_xview[0]+hud_left_x+xan, view_yview[0]+hud_left_y );
+draw_sprite(spr_hud_bottom, 0, view_xview[0]+hud_bot_x, view_yview[0]+hud_bot_y );
 
 //drawing turn of players 
 draw_set_halign(fa_center);

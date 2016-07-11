@@ -158,7 +158,7 @@ if( info_obj != noone){
     draw_sprite(spr_resource_icons_small,3,x+info_offset+xic, y+h+info_inner_y+(14*4));
     draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*5),info_obj.population);
     draw_sprite(spr_resource_icons_small,4,x+info_offset+xic, y+h+info_inner_y+(14*5));
-    draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*6),string((info_obj.pop_incr-1)*100)+"%");
+    draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*6),string_format((info_obj.pop_incr-1)*100, 0, 1)+"%");
     draw_sprite(spr_resource_icons_small,5,x+info_offset+xic, y+h+info_inner_y+(14*6));
     
 }

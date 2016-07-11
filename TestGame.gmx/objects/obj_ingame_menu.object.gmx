@@ -25,11 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(0,0,obj_ingame_menu_return_button);
+            <string>x = (view_xview[0]+view_wview[0])/2;
+y = (view_yview[0]+view_hview[0])/2;
+instance_create(0,0,obj_ingame_menu_return_button);
 instance_create(0,0,obj_ingame_menu_settings_button);
 instance_create(0,0,obj_ingame_menu_exit_button);
-x = (view_xview[0]+view_wview[0])/2;
-y = (view_yview[0]+view_hview[0])/2;
+
 </string>
           </argument>
         </arguments>

@@ -79,8 +79,12 @@ background_hspeed[3] = 1.25
             <kind>1</kind>
             <string>image_index = 1;
 audio_play_sound(menuButtonClick,10,false);
-
-effect_create_above(ef_spark, bbox_left + sprite_width - random(10), bbox_top + 3, random(1)+.5, merge_colour(c_white, c_yellow, random(.75)+.25));
+if(room==rm_mainMenu){
+    effect_create_above(ef_spark, bbox_left + sprite_width - random(10), bbox_top + 3, random(1)+.5, merge_colour(c_white, c_yellow, random(.75)+.25));
+}
+else{
+    effect_create_above(ef_spark, bbox_left + sprite_width - random(10), bbox_top + 3, random(1)+.5, merge_colour(c_yellow, c_red, random(.25)+.10));
+}
 </string>
           </argument>
         </arguments>
@@ -104,7 +108,6 @@ effect_create_above(ef_spark, bbox_left + sprite_width - random(10), bbox_top + 
           <argument>
             <kind>1</kind>
             <string>
-
 draw_self();
 </string>
           </argument>

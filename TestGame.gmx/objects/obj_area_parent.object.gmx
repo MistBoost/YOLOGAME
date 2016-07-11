@@ -51,13 +51,13 @@ border_color = c_black;
           <argument>
             <kind>1</kind>
             <string>
-for(var i=0; i&lt;global.players; i++){
-    if(sign(ds_list_find_index(obj_map_control.player_areas[i], self.id)+1)){
+for(var i=0; i&lt;=global.players; i++){
+    if(sign(ds_list_find_index(obj_map_control.player_areas[i], id)+1)){
         color = global.player_color[i];
     }
 }
 
-if(global.selected_area == self.id){
+if(global.selected_area == id){
     border_color = global.player_select_color;
     depth = -2;
 }
@@ -141,8 +141,8 @@ depth = -1;*/
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(sign(ds_list_find_index(obj_map_control.player_areas[0], self.id)+1)){
-    global.selected_area = self.id;
+            <string>if(sign(ds_list_find_index(obj_map_control.player_areas[global.player_id], id)+1)){
+    global.selected_area = id;
 }
 </string>
           </argument>

@@ -34,7 +34,7 @@
     <sprite>sprites\spr_hud_left</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\bg_menu</background>
+    <background>background\bg_menu_off</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">

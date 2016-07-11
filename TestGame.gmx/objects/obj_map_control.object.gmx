@@ -39,21 +39,25 @@ area[8] = obj_area8.id;
 area[9] = obj_area9.id;
 
 global.players = 2;
+global.neutral_id = 0;
+global.player_id = 1;
 global.areas = 10;
 global.selected_area = 0;
 global.player_select_color = make_color_rgb(24,24,148);
 
-global.player_color[0] = make_color_rgb(64,64,208);
-global.player_color[1] = make_color_rgb(208,64,64);
+global.player_color[0] = make_color_rgb(156,156,156);
+global.player_color[1] = make_color_rgb(64,64,208);
+global.player_color[2] = make_color_rgb(208,64,64);
 
 
 instance_create(0,0, obj_gui);
 
-for(var i=0; i&lt;global.players; i++){
+for(var i=0; i&lt;=global.players; i++){
     player_areas[i] = ds_list_create();
 }
-ds_list_add(player_areas[0], area[0], area[1]);
-ds_list_add(player_areas[1], area[8], area[9]);
+ds_list_add(player_areas[0], area[2], area[3], area[4], area[5], area[6], area[7]);
+ds_list_add(player_areas[1], area[0], area[1]);
+ds_list_add(player_areas[2], area[8], area[9]);
 </string>
           </argument>
         </arguments>

@@ -8,11 +8,11 @@ Resources:
 
 Areas:
 	ID: 0
-	Name: South Hollow
+	Name: Nopehx Hollow
 	Resources: Wood - 5, Iron - 5, Gold - 4, Food - 7
 	
 	ID:1 
-	Name: North Hollow
+	Name: The Shivering Fields
 	Resources: Wood - 3, Iron - 7, Gold - 3, Food - 6
 	
 	ID:2 
@@ -28,7 +28,7 @@ Areas:
 	Resources: Wood - 4, Iron - 8, Gold - 1, Food - 3
 	
 	ID:5 
-	Name: Bardford
+	Name: Bardford Forests
 	Resources: Wood - 7, Iron - 2, Gold - 6, Food - 4
 	
 	ID:6 
@@ -44,7 +44,7 @@ Areas:
 	Resources: Wood - 4, Iron - 5, Gold - 4, Food - 6
 	
 	ID:9
-	Name: Ilfrabeck
+	Name: Ilfrabeck Crag
 	Resources: Wood - 6, Iron - 4, Gold - 6, Food - 5
 	
 Buildings:

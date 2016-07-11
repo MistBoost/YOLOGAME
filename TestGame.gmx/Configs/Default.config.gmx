@@ -633,5 +633,12 @@
     <option_xbone_texture_page>1024</option_xbone_texture_page>
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
-  <ConfigConstants/>
+  <ConfigConstants>
+    <constants number="4">
+      <constant name="c_food_start">32</constant>
+      <constant name="c_gold_start">28</constant>
+      <constant name="c_iron_start">18</constant>
+      <constant name="c_wood_start">24</constant>
+    </constants>
+  </ConfigConstants>
 </Config>

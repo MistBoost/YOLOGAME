@@ -36,6 +36,13 @@ hud_left_drawing = false;
 hud_left_x_anim = hud_left_w;
 hud_left_x_anim_spd = 14;
 
+hud_bot_w = sprite_get_width(spr_hud_bottom);
+hud_bot_h = sprite_get_height(spr_hud_bottom);
+hud_bot_x = 0;
+hud_bot_y = view_hview[0]-hud_bot_h;
+hud_bot_x_off = 7;
+hud_bot_y_off = 10;
+
 play_room_w = room_width-hud_left_w;
 play_room_h = room_height;
 </string>
@@ -109,6 +116,7 @@ var xan = hud_left_x_anim;
 //drawing HUD background (menu)
 draw_sprite(spr_turn_info, -1, view_xview[0]+(play_room_w/2), view_yview[0]);
 draw_sprite(spr_hud_left, -1, view_xview[0]+hud_left_x+xan, view_yview[0]+hud_left_y );
+draw_sprite(spr_hud_bottom, -1, view_xview[0]+hud_bot_x, view_yview[0]+hud_bot_y );
 
 //drawing turn of players 
 draw_set_halign(fa_center);
@@ -127,7 +135,7 @@ if (global.selected_area!=noone &amp;&amp; hud_left_drawing){
     
     draw_set_color(c_black);
     draw_set_alpha(1);
-    draw_set_font(f_menu_left);
+    draw_set_font(f_menu);
     draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), sel.name);
     draw_text(hud_left_x+hud_left_x_off, hud_left_y+hud_left_y_off+off+ (yy*ii++), "Owner: Player" + string(scr_get_owner(sel.id)));
     off = 12;
@@ -145,14 +153,35 @@ if (global.selected_area!=noone &amp;&amp; hud_left_drawing){
     
     draw_set_color(c_white);
 }
-    draw_set_color(c_blue);
-    draw_text(100,view_hview[0]-50,string(global.player_list[| 0].wood_res));
-    draw_text(130,view_hview[0]-50,string(global.player_list[| 0].iron_res));
-    draw_text(160,view_hview[0]-50,string(global.player_list[| 0].gold_res));
-    draw_text(190,view_hview[0]-50,string(global.player_list[| 0].food_res));   
+    draw_set_color(c_black);
+    draw_set_font(f_menu);
+    /*draw_text(100,view_hview[0]-50,string(global.player_list[| global.player_id].wood_res));
+    draw_text(130,view_hview[0]-50,string(global.player_list[| global.player_id].iron_res));
+    draw_text(160,view_hview[0]-50,string(global.player_list[| global.player_id].gold_res));
+    draw_text(190,view_hview[0]-50,string(global.player_list[| global.player_id].food_res)); */ 
+    var _xx = 100;
+    var _yy = 15;
+    var _ii = 0;
+    var _jj = 0;
+    var str = "";
+    draw_text(hud_bot_x+hud_bot_x_off + (_xx*_ii), hud_bot_y+hud_bot_y_off + (_yy*_jj++), "Resources: ");
+    str = "Wood: " + string(global.player_list[| global.player_id].wood_stock) + " (+"+string(global.player_list[| global.player_id].wood_res)+")";
+    draw_text(hud_bot_x+hud_bot_x_off + (_xx*_ii), hud_bot_y+hud_bot_y_off + (_yy*_jj), str);
+    draw_sprite(spr_resource_icons_small,0,hud_bot_x+hud_bot_x_off + (_xx*_ii)+string_width(str)+4, hud_bot_y+hud_bot_y_off + (_yy*_jj++)+2);
+    str = "Iron: " + string(global.player_list[| global.player_id].iron_stock) + " (+"+string(global.player_list[| global.player_id].iron_res)+")";
+    draw_text(hud_bot_x+hud_bot_x_off + (_xx*_ii), hud_bot_y+hud_bot_y_off + (_yy*_jj), str);
+    draw_sprite(spr_resource_icons_small,1,hud_bot_x+hud_bot_x_off + (_xx*_ii)+string_width(str)+4, hud_bot_y+hud_bot_y_off + (_yy*_jj++)+2);
+    str = "Gold: " + string(global.player_list[| global.player_id].gold_stock) + " (+"+string(global.player_list[| global.player_id].gold_res)+")"
+    draw_text(hud_bot_x+hud_bot_x_off + (_xx*_ii), hud_bot_y+hud_bot_y_off + (_yy*_jj), str);
+    draw_sprite(spr_resource_icons_small,2,hud_bot_x+hud_bot_x_off + (_xx*_ii)+string_width(str)+4, hud_bot_y+hud_bot_y_off + (_yy*_jj++)+2);
+    str = "Food: " + string(global.player_list[| global.player_id].food_stock) + " (+"+string(global.player_list[| global.player_id].food_res)+")"
+    draw_text(hud_bot_x+hud_bot_x_off + (_xx*_ii), hud_bot_y+hud_bot_y_off + (_yy*_jj), str);
+    draw_sprite(spr_resource_icons_small,3,hud_bot_x+hud_bot_x_off + (_xx*_ii)+string_width(str)+4, hud_bot_y+hud_bot_y_off + (_yy*_jj++)+2);
     
     
     draw_set_color(c_white);
+    
+    
 </string>
           </argument>
         </arguments>

@@ -3,25 +3,23 @@
   <type>0</type>
   <xorig>0</xorig>
   <yorigin>0</yorigin>
-  <colkind>0</colkind>
+  <colkind>1</colkind>
   <coltolerance>0</coltolerance>
-  <sepmasks>-1</sepmasks>
+  <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>511</bbox_right>
+  <bbox_right>799</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>511</bbox_bottom>
+  <bbox_bottom>119</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>512</width>
-  <height>512</height>
+  <width>800</width>
+  <height>120</height>
   <frames>
-    <frame index="0">images\spr_map_0.png</frame>
-    <frame index="1">images\spr_map_1.png</frame>
-    <frame index="2">images\spr_map_2.png</frame>
+    <frame index="0">images\spr_hud_bottom_0.png</frame>
   </frames>
 </sprite>

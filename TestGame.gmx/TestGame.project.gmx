@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\menuButtonClick</sound>
+    <sound>sound\snd_background1</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="spriteGroup_mainMenu">
@@ -80,11 +81,11 @@
     </objects>
     <object>objects\obj_cursor</object>
     <object>objects\obj_player_parent</object>
+    <object>objects\obj_sound_control</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
     <room>rooms\rm_map</room>
-    <room>rooms\peto</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

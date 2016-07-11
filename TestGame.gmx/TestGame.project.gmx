@@ -42,6 +42,8 @@
       <sprite>sprites\spr_turnend_button</sprite>
       <sprite>sprites\spr_hud_bottom</sprite>
     </sprites>
+    <sprite>sprites\spr_ingame_menu_bg</sprite>
+    <sprite>sprites\spr_ingame_menu_return_button</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_menu_off</background>
@@ -87,6 +89,12 @@
     <object>objects\obj_cursor</object>
     <object>objects\obj_player_parent</object>
     <object>objects\obj_sound_control</object>
+    <objects name="obj_ingame_menu">
+      <object>objects\obj_ingame_menu</object>
+      <object>objects\obj_ingame_menu_return_button</object>
+      <object>objects\obj_ingame_menu_settings_button</object>
+      <object>objects\obj_ingame_menu_exit_button</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>

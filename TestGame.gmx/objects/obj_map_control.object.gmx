@@ -70,6 +70,7 @@ for (i = 0; i &lt;= global.players; i++) {
     else{
         pl=instance_create(0,0, obj_AI_player);
     }
+    pl.order_id = i;
     //player[i]=pl.id;
     ds_list_add(global.player_list, pl.id);
 }

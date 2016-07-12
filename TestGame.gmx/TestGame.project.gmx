@@ -60,6 +60,7 @@
     <script>scripts\scr_cap.gml</script>
     <script>scripts\scr_check_turn.gml</script>
     <script>scripts\scr_area_change_owner.gml</script>
+    <script>scripts\scr_area_neighbours_nation.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_info_small</font>

@@ -32,7 +32,10 @@
       <sprites name="Icons">
         <sprite>sprites\spr_religion_signs</sprite>
         <sprite>sprites\spr_cursor_1</sprite>
+        <sprite>sprites\sprite25</sprite>
         <sprite>sprites\spr_resource_icons_small</sprite>
+        <sprite>sprites\spr_cursor_2</sprite>
+        <sprite>sprites\sprite24</sprite>
       </sprites>
       <sprite>sprites\spr_turn_info</sprite>
       <sprite>sprites\spr_hud_left</sprite>
@@ -52,6 +55,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_get_owner.gml</script>
+    <script>scripts\scr_cap.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_info_small</font>
@@ -80,6 +84,7 @@
       <object>objects\obj_gui</object>
       <object>objects\obj_map_control</object>
       <object>objects\obj_turnend_button</object>
+      <object>objects\obj_turn_control</object>
     </objects>
     <object>objects\obj_cursor</object>
     <object>objects\obj_player_parent</object>

@@ -49,8 +49,10 @@ global.player_color[0] = make_color_rgb(156,156,156);
 global.player_color[1] = make_color_rgb(64,64,208);
 global.player_color[2] = make_color_rgb(208,64,64);
 
-
+//Creating map instances
 instance_create(0,0, obj_gui);
+instance_create(0,0, obj_turn_control);
+
 
 for(var i=0; i&lt;=global.players; i++){
     player_areas[i] = ds_list_create();

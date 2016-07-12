@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_player_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,38 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-name = "unnamed";
+            <string>event_inherited();
 
-
-//resources
-wood_res = 0;
-iron_res = 0;
-gold_res = 0;
-food_res = 0;
-
-//total resources
-wood_stock = c_wood_start;
-iron_stock = c_iron_start;
-gold_stock = c_gold_start;
-food_stock = c_food_start;
-
-//buildings
-building_woodcutter = 0;
-building_sawmill = 0;
-building_iron_mine = 0;
-building_gold_mine = 0;
-building_wheat_farm = 0;
-building_mill = 0;
-building_cattle_farm = 0;
-building_blacksmith = 0;
+waiting = true;
 
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="11">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -73,12 +51,15 @@ building_blacksmith = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Waiting time
-waiting = true;
-
-with(obj_turn_control){
+            <string>event_inherited();
+if(waiting)
+if(scr_check_turn(id)){
+    /*with(obj_turn_control){
         event_perform(ev_other, ev_user0);
-    }
+    }*/
+    waiting=false;
+    alarm[11] = 30;
+}
 </string>
           </argument>
         </arguments>

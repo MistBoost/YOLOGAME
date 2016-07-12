@@ -37,6 +37,9 @@ horseman = 7;
 units[0] = 10;
 units[1] = 6;
 units[2] = 5;
+
+xx = x;
+yy = y;
 </string>
           </argument>
         </arguments>
@@ -85,6 +88,37 @@ if(id==obj_map.id){
     color = c_white;
     border_color = c_white;
 }
+
+x = xx *global.zoom;
+y = yy *global.zoom;
+
+image_xscale = global.zoom;
+image_yscale = global.zoom;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+if(scr_get_owner(id)==0)
+scr_area_change_owner(id, global.player_id);
 </string>
           </argument>
         </arguments>
@@ -136,8 +170,8 @@ else{
           <argument>
             <kind>1</kind>
             <string>
-draw_sprite_ext(sprite_index, 0, x, y, 1, 1, 0, color, 1);
-draw_sprite_ext(sprite_index, 1, x, y, 1, 1, 0, border_color, 1);
+draw_sprite_ext(sprite_index, 0, x, y, image_xscale, image_yscale, 0, color, 1);
+draw_sprite_ext(sprite_index, 1, x, y, image_xscale, image_yscale, 0, border_color, 1);
 
 </string>
           </argument>

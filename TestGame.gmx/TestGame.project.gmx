@@ -58,6 +58,8 @@
   <scripts name="scripts">
     <script>scripts\scr_get_owner.gml</script>
     <script>scripts\scr_cap.gml</script>
+    <script>scripts\scr_check_turn.gml</script>
+    <script>scripts\scr_area_change_owner.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_info_small</font>
@@ -65,12 +67,12 @@
     <font>fonts\f_menu</font>
   </fonts>
   <objects name="objects">
-    <objects name="gMainMenu">
+    <objects name="mainmenu_group">
       <object>objects\obj_parentButton</object>
       <object>objects\obj_playButton</object>
       <object>objects\obj_exitButton</object>
     </objects>
-    <objects name="Map">
+    <objects name="map_group">
       <object>objects\obj_area_parent</object>
       <object>objects\obj_map</object>
       <object>objects\obj_area0</object>
@@ -83,19 +85,24 @@
       <object>objects\obj_area7</object>
       <object>objects\obj_area8</object>
       <object>objects\obj_area9</object>
-      <object>objects\obj_gui</object>
       <object>objects\obj_map_control</object>
-      <object>objects\obj_turnend_button</object>
       <object>objects\obj_turn_control</object>
     </objects>
-    <objects name="obj_ingame_menu">
+    <objects name="ingame_gui">
+      <object>objects\obj_gui</object>
       <object>objects\obj_ingame_menu</object>
       <object>objects\obj_ingame_menu_return_button</object>
       <object>objects\obj_ingame_menu_settings_button</object>
       <object>objects\obj_ingame_menu_exit_button</object>
+      <object>objects\obj_turnend_button</object>
+    </objects>
+    <objects name="player_group">
+      <object>objects\obj_player_parent</object>
+      <object>objects\obj_AI_player</object>
+      <object>objects\obj_neutral_player</object>
+      <object>objects\obj_human_player</object>
     </objects>
     <object>objects\obj_cursor</object>
-    <object>objects\obj_player_parent</object>
     <object>objects\obj_sound_control</object>
   </objects>
   <rooms name="rooms">

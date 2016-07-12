@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_player_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,72 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 0;
-image_speed = 0;
+            <string>event_inherited();
 
-background_hspeed[0] = 0.25
-background_hspeed[1] = 0.5
-background_hspeed[2] = 0.85
-background_hspeed[3] = 1.25
+waiting = true;
+neigh_areas = ds_list_create();
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="11">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>image_index = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="10">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>image_index = 1;
-audio_play_sound(menuButtonClick,10,false);
-if(room==rm_mainMenu){
-    effect_create_above(ef_spark, bbox_left + sprite_width - random(10), bbox_top + 3, random(1)+.5, merge_colour(c_white, c_yellow, random(.75)+.25));
-}
-else{
-    effect_create_above(ef_spark, bbox_left + sprite_width - random(10), bbox_top + 3, random(1)+.5, merge_colour(c_yellow, c_red, random(.25)+.10));
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -108,7 +52,38 @@ else{
           <argument>
             <kind>1</kind>
             <string>
-draw_self();
+area_neigh = scr_area_neighbours_nation();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
+if(waiting)
+if(scr_check_turn(id)){
+    
+    waiting=false;
+    alarm[11] = 30;
+    alarm[0] = 5;
+}
 </string>
           </argument>
         </arguments>

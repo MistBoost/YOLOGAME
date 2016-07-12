@@ -49,11 +49,6 @@ global.player_color[0] = make_color_rgb(156,156,156);
 global.player_color[1] = make_color_rgb(64,64,208);
 global.player_color[2] = make_color_rgb(208,64,64);
 
-//Creating map instances
-instance_create(0,0, obj_gui);
-instance_create(0,0, obj_turn_control);
-
-
 for(var i=0; i&lt;=global.players; i++){
     player_areas[i] = ds_list_create();
 }
@@ -65,7 +60,19 @@ ds_list_add(player_areas[2], area[8], area[9]);
 
 global.player_list = ds_list_create();
 for (i = 0; i &lt;= global.players; i++) {
-    ds_list_add(global.player_list, instance_create(0,0,obj_player_parent).id);
+    var pl;
+    if(i==0){
+        pl=instance_create(0,0, obj_neutral_player);
+    }
+    else if(i==1){
+        pl=instance_create(0,0, obj_human_player);
+    }
+    else{
+        pl=instance_create(0,0, obj_AI_player);
+    }
+    pl.order_id = i;
+    //player[i]=pl.id;
+    ds_list_add(global.player_list, pl.id);
 }
 
 for (j = 0; j &lt;= global.players; j++) {
@@ -112,6 +119,29 @@ ds_list_add(area_neigh[6], area[2], area[4], area[5], area[7], area[8]);
 ds_list_add(area_neigh[7], area[3], area[4], area[6], area[8]);
 ds_list_add(area_neigh[8], area[5], area[6], area[7], area[9]);
 ds_list_add(area_neigh[9], area[8]);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Creating map instances
+instance_create(0,0, obj_gui);
+instance_create(0,0, obj_turn_control);
 </string>
           </argument>
         </arguments>

@@ -27,10 +27,12 @@
             <kind>1</kind>
             <string>///Basic variables
 
-player_turn = 1;
-turn_queue = ds_queue_create();
-ds_queue_enqueue(turn_queue, 2,0, 1);
+turn_i = 1;
+player_turn = global.player_list[|turn_i].id;
+//turn_queue = ds_queue_create();
+//ds_queue_enqueue(turn_queue, global.player_list[|2].id,global.player_list[|0].id, global.player_list[|1].id);
 
+next_turn = global.player_list[|++turn_i mod (global.players+1)].id;
 </string>
           </argument>
         </arguments>
@@ -54,8 +56,11 @@ ds_queue_enqueue(turn_queue, 2,0, 1);
           <argument>
             <kind>1</kind>
             <string>
-player_turn = ds_queue_dequeue(turn_queue);
-ds_queue_enqueue(turn_queue, player_turn);
+//player_turn = ds_queue_dequeue(turn_queue);
+//ds_queue_enqueue(turn_queue, player_turn);
+
+player_turn = next_turn;
+next_turn = global.player_list[|++turn_i mod (global.players+1)].id;
 
 </string>
           </argument>

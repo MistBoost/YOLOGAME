@@ -34,8 +34,17 @@ info_inner_y = 2;
 info_height = 122;
 spr_ind = 0;
 spr_spd = 8;
-can_click = true;
 alarm[0] = spr_spd;
+
+global.can_click = true;
+global.zoom = 1;
+global.zoom_move = global.zoom;
+global.zoom_scale = 0.01;
+global.zoom_move_scale = 0.1;
+global.zoom_scale_2 = 0.01;
+global.zoom_max = 2;
+global.zoom_min = 1;
+
 </string>
           </argument>
         </arguments>
@@ -84,13 +93,59 @@ alarm[0] = spr_spd;
             <kind>1</kind>
             <string>x = mouse_x;
 y = mouse_y;
+if(instance_exists(obj_turn_control))
+    if(obj_turn_control.player_turn == global.player_id){
+        global.can_click = true;
+    }
+    else{
+        global.can_click = false;
+    }
+if(instance_exists(obj_map_control)) {
+    if (scr_check_turn(global.player_list[|global.player_id])){
+        global.can_click = true;
+    }
+    else{
+        global.can_click = false;
+    }
+}
 
-if(!can_click){
-    sprite_index=spr_cursor_2;
+if(room==rm_map){
+    if(!instance_exists(obj_ingame_menu)){
+        if(!global.can_click){
+            sprite_index=spr_cursor_2;
+        }
+        else{
+            sprite_index=spr_cursor_1;
+        }
+    }
+    else{
+        sprite_index=spr_cursor_1;
+    }
 }
 else{
     sprite_index=spr_cursor_1;
 }
+
+//global.zoom_scale = global.zoom_scale_2 + (abs(global.zoom_move-global.zoom)/5);
+
+if(mouse_wheel_up()){
+    global.zoom_move+=global.zoom_move_scale;
+}
+if(mouse_wheel_down()){
+    global.zoom_move-=global.zoom_move_scale;
+}
+
+if(global.zoom_move!=global.zoom){
+    global.zoom += sign(global.zoom_move-global.zoom)*global.zoom_scale;
+}
+
+global.zoom = clamp(global.zoom, global.zoom_min, global.zoom_max);
+global.zoom_move = clamp(global.zoom_move, global.zoom_min, global.zoom_max);
+
+
+
+
+
 </string>
           </argument>
         </arguments>
@@ -158,7 +213,7 @@ if( info_obj != noone){
     draw_sprite(spr_resource_icons_small,3,x+info_offset+xic, y+h+info_inner_y+(14*4));
     draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*5),info_obj.population);
     draw_sprite(spr_resource_icons_small,4,x+info_offset+xic, y+h+info_inner_y+(14*5));
-    draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*6),string((info_obj.pop_incr-1)*100)+"%");
+    draw_text(x+info_offset+info_inner_x+20, y+h+info_inner_y+(14*6),string_format((info_obj.pop_incr-1)*100, 0, 1)+"%");
     draw_sprite(spr_resource_icons_small,5,x+info_offset+xic, y+h+info_inner_y+(14*6));
     
 }

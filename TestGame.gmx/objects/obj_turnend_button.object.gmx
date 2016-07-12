@@ -73,13 +73,14 @@ image_index = 0;
           <argument>
             <kind>1</kind>
             <string>///Button click and animation handler
-if(mouse_check_button_pressed(mb_left) &amp;&amp; place_meeting(x,y,obj_cursor) &amp;&amp; obj_turn_control.player_turn==global.player_id){
-    image_index = 1;
-    alarm[0] = 20;
-    with(obj_turn_control){
-        event_perform(ev_other, ev_user0);
-    }
-    obj_cursor.can_click = false;
+if(mouse_check_button_pressed(mb_left) &amp;&amp; place_meeting(x,y,obj_cursor))
+    if (scr_check_turn(global.player_list[|global.player_id])){
+        image_index = 1;
+        alarm[0] = 20;
+        with(obj_turn_control){
+            event_perform(ev_other, ev_user0);
+        }
+        //global.can_click = false;
 }
 </string>
           </argument>

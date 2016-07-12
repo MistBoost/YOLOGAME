@@ -114,19 +114,19 @@ else{
             <string>
 var xan = hud_left_x_anim;
 //drawing HUD background (menu)
-draw_sprite(spr_turn_info, -1, view_xview[0]+(play_room_w/2), view_yview[0]);
-draw_sprite(spr_hud_left, -1, view_xview[0]+hud_left_x+xan, view_yview[0]+hud_left_y );
-draw_sprite(spr_hud_bottom, -1, view_xview[0]+hud_bot_x, view_yview[0]+hud_bot_y );
+draw_sprite(spr_turn_info, 0, view_xview[0]+(play_room_w/2), view_yview[0]);
+draw_sprite(spr_hud_left, 0, view_xview[0]+hud_left_x+xan, view_yview[0]+hud_left_y );
+draw_sprite(spr_hud_bottom, 0, view_xview[0]+hud_bot_x, view_yview[0]+hud_bot_y );
 
 //drawing turn of players 
 draw_set_halign(fa_center);
 draw_set_color(c_black);
 draw_set_font(f_info);
 var turn_str;
-if(obj_turn_control.player_turn==global.player_id)
+if(obj_turn_control.player_turn==global.player_list[|global.player_id])
     turn_str = "YOUR TURN";
 else
-    turn_str = "PLAYER" + string(obj_turn_control.player_turn)
+    turn_str = "PLAYER" + string(ds_list_find_index(global.player_list,obj_turn_control.player_turn))
 draw_text(view_xview[0]+(play_room_w/2), view_yview[0]+8, turn_str);
 draw_set_color(c_white);
 draw_set_halign(fa_left);

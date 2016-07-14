@@ -61,6 +61,11 @@ next_turn = global.player_list[|++turn_i mod (global.players+1)].id;
 
 player_turn = next_turn;
 next_turn = global.player_list[|++turn_i mod (global.players+1)].id;
+  
+player_turn.wood_stock += player_turn.wood_res;
+player_turn.iron_stock += player_turn.iron_res;
+player_turn.gold_stock += player_turn.gold_res;
+player_turn.food_stock += player_turn.food_res;
 
 </string>
           </argument>
